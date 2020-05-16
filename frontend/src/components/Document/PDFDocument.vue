@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry'
+
 export default {
     name: 'PDFDocument',
     props: ['url', 'scale', 'curPage'],
@@ -15,6 +17,8 @@ export default {
         getPDFPage: function() {
             import('pdfjs-dist')
             .then(pdfjs => {
+                pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
+
                 pdfjs.getDocument(this.url)
                 .then(pdf => {
                     pdf.getPage(this.curPage)
