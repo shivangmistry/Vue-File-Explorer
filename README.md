@@ -1,7 +1,7 @@
 # Vue-File-Explorer
 
 
-**Application URL:** https://vue-file-system.herokuapp.com
+**Application URL:** https://vue-file-explorer.herokuapp.com
 
 **Backend URL:** https://salty-forest-05662.herokuapp.com
 
